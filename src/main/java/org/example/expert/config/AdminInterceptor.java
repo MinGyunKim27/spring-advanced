@@ -21,7 +21,7 @@ public class AdminInterceptor implements HandlerInterceptor {
     public boolean preHandle(
             HttpServletRequest request,
             HttpServletResponse response,
-            Object Handler
+            Object handler
     ) throws  Exception{
         String tokenValue = request.getHeader("Authorization");
 
@@ -40,7 +40,9 @@ public class AdminInterceptor implements HandlerInterceptor {
             return false;
         }
 
-        log.info("[ADMIN ACCESS] {} - {} ", LocalDate.now(),request.getRequestURI());
+        log.info("[ADMIN ACCESS] {} - {} \n" +
+                "request = {}\n" +
+                "response = {}", LocalDate.now(),request.getRequestURI(),request,response);
 
         return true;
     }
