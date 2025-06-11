@@ -3,9 +3,9 @@ package org.example.expert.domain.user.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.expert.domain.common.dto.AuthUser;
-import org.example.expert.domain.common.entity.Timestamped;
-import org.example.expert.domain.user.enums.UserRole;
+import org.example.expert.global.common.dto.AuthUser;
+import org.example.expert.global.common.entity.Timestamped;
+import org.example.expert.global.enums.UserRole;
 
 @Getter
 @Entity
